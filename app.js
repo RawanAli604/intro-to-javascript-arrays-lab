@@ -153,11 +153,6 @@ Complete Exercise 11 in the space below:
 
 const nums = [100, 5, 23, 15, 21, 72, 9, 45, 66, 7, 81, 90];
 
-// iterate thru the loop
-for(let i=0; i<nums.length; i++){
-    console.log(nums[i]);
-}
-
 //push odd nums to new array 
 const odds=[];
 for(let i=0; i<nums.length; i++){
@@ -230,11 +225,58 @@ const numArrays = [
 	[7, 81, 90]
 ];
 
-let numList = [];
-for(let i=0; i<numArrays.length; i++){
-if (numArrays[][numArrays.length]){
-   numList = numArrays[][];
-}
+ let numList = [];
+ let a=0;
+ for(let i=0; i<numArrays.length; i++){
+    a = i;
+ }
+ numList.push(numArrays[a]);
+
+
+
+ console.log('Exercise 13 result:', numList);
+
+/*
+Exercise 14: Accessing within nested arrays
+
+1) Retrieve the number `66` from the `numArrays` array. As part of this process
+   do not alter the original `numArrays` array.
+
+2) Assign it to a variable called `num`.
+
+Complete Exercise 14 in the space below:
+*/
+
+let num = 0;
+for(let i=0; i<=2; i++){
+   for(let j=0; j<=1; j++){
+      if(numArrays[i][j]==numArrays[2][1]){
+         num = numArrays[2][1];
+      }
+   }
 }
 
-console.log('Exercise 13 result:', numList);
+console.log('Exercise 14 result:', num);
+
+
+/*
+Exercise 15: Nested array sum
+
+1) Use nested loops or `forEach()` methods to sum up all numbers within 
+   `numArrays` nested arrays.
+   
+2) Assign the sum to a variable called `total`.
+
+Hint: Be sure to declare and initialize the total variable before the iterations.
+
+Complete Exercise 15 in the space below:
+*/
+
+let total = 0;
+
+for(let i=0; i<numArrays.length; i++){
+   for(let j=0; j<numArrays[i].length; j++){
+      total = total + numArrays[i][j];
+   }
+}
+console.log('Exercise 15 result:', total);
